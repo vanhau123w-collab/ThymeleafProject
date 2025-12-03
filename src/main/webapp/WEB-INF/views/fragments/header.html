@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <nav th:fragment="header" class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#"> 
+                <img th:src="@{/images/avatar.jpg}" alt="Avatar" width="40" height="40"
+                     class="rounded-circle border border-white me-2"> 
+                <span class="fw-bold">My Admin System</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/categories}">
+                            <i class="fas fa-list-ul me-1"></i> Danh mục
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/users}">
+                            <i class="fas fa-users me-1"></i> Người dùng
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/videos}">
+                            <i class="fas fa-video me-1"></i> Video
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-2 text-white-50 d-none d-lg-block">|</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user me-1"></i> Profile
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-warning fw-bold" href="#">
+                            <i class="fas fa-sign-out-alt me-1"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
